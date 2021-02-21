@@ -1,5 +1,6 @@
 # test-circle
 《测试圈TC》 公众号文章同步
+
 ![](/tc.png)
 
 ### playwright 系列
@@ -8,3 +9,9 @@
 * [Playwright VS Selenium VS Puppeteer VS Cypress](playwrigth/playwright_vs_other.md)
 * [Playwright自动化工具特点](playwrigth/playwright_sample.md)
 * [playwright自动化项目搭建](/playwrigth/playwright_pro.md)
+
+### selenium 4 系列
+
+* [Selenium 4 源码分析](selenium4/selenium_python.md)
+* [Selenium 4 Grid工作原理](selenium4/selenium_grid4.md)
+
