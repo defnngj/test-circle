@@ -74,7 +74,7 @@ New Session Queue 新会话队列__
  
 __Event Bus 事件总线__
  
-`Event Bus` 总当`Node`、`Distributor`、 `New Session Queuer`和 `Session Map`之间的通信路径。Grid通过消息时行大部分的内部通信，避免了昂贵的HTTP调用。
+`Event Bus` 总线充当`Node`、`Distributor`、 `New Session Queuer`和 `Session Map`之间的通信路径。Grid通过消息进行大部分的内部通信，避免了昂贵的HTTP调用。
  
 __Role In Grid__
  

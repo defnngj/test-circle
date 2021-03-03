@@ -106,7 +106,6 @@ print(ids)
 
 在`remote.webdriver`文件的`WebDriver` 类（所有浏览器类都继承该类）新增的几个API无关痛痒，而且还没注解，所以暂时不清楚具体用法。
 
-* timeout: 获取已在当前会话上设置的所有超时。
 * log： 无注释
 * pin_script：无注释 
 * unpin： 无注释
@@ -115,14 +114,52 @@ print(ids)
 
 ```py
 
-print(dr.timeouts)
-print(dr.log)
-
 dr.pin_script(script="??")
 dr.unpin(script_key="??")
 print(dr.get_pinned_scripts())
 
 ```
+
+不过，我也发现了几个有用的API
+
+* 打开并切换到新窗口/标签。
+
+```python
+dr.switch_to.new_window("window")
+dr.switch_to.new_window("tab")
+```
+
+* 获取不同设置的超时间。
+
+```python
+from selenium import webdriver
+
+dr = webdriver.Chrome()
+dr.implicitly_wait(10)
+dr.set_page_load_timeout(3)
+dr.set_script_timeout(7)
+
+print(dr.timeouts.implicit_wait)
+print(dr.timeouts.page_load)
+print(dr.timeouts.script)
+```
+
+* 获取当前页面PDF文件。
+
+```python
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+chrome_options = Options()
+chrome_options.headless = True
+dr = webdriver.Chrome(options=chrome_options)
+dr.get("https://docs.pytest.org/en/stable/#documentation")
+
+# 获取当前页面PDF文件
+print(dr.print_page())
+```
+
+
 
 ## Trio CDP
 
@@ -137,6 +174,21 @@ CDP全称：Chrome DevTools Protocol
 > CDP是一种基于Chrome的浏览器中启用调试器而开发的协议。它是一个非正式协议，不是一个面向用户的API，允许您反省浏览器。 Puppeteer和Cypress者建立在该协议上，在测试和浏览器之间引入一个`network hop`，随着网络延迟的增加，这种方式会导致测试速度变慢。更复杂的是，由于CDP被设计为一个调试协议，所以在不同版本之间它可以在没有任何通知的情况下进行更改。这就是为什么Puppeter和Cypress与特定版本的浏览器绑定在一起，这给作为测试作者的您带来了一个难题：如何在浏览器的多个版本上进行测试？
 > 
 > 尽管如此，使用CDP还是有很多可能性，这就是为什么我们在Selenium4中增加了对它的支持。事实上，我们的一些新功能是建立在它之上的（尽管我们隐藏了细节！）
+
+代码注解的示例：
+```py
+from selenium import webdriver
+from selenium.webdriver.common.bidi.console import Console
+
+dr = webdriver.Chrome()
+
+dr.get("https://www.baidu.com")
+
+
+with dr.log.add_listener(Console.log) as messages:
+    dr.execute_script("console.log('I like cheese')")
+assert messages["message"] == "I love cheese"
+```
 
 
 ## 最后
