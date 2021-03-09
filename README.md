@@ -15,3 +15,6 @@
 * [Selenium 4 源码分析](selenium4/selenium_python.md)
 * [Selenium 4 Grid工作原理](selenium4/selenium_grid4.md)
 
+### cypree 系列
+
+* [前端开发：基于cypress的自动化实践](cypress/vue-cypress.md)
