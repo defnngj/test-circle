@@ -172,6 +172,8 @@ def test_bubble_sort(benchmark):
 2. `benchmark` 作为钩子函数使用，不需要导入包。前提是你需要安装`pytest`和`pytest-benchmark`。
 3. 为了方便断言，我们就把要排序的数固定下来了。
 
+运行测试用例：
+
 ```
 ❯ pytest -q .\test_demo.py
 .                                                                       [100%]
@@ -187,6 +189,25 @@ Legend:
   OPS: Operations Per Second, computed as 1 / Mean
 1 passed in 1.98s
 ```
+
+加上 `--benchmark-histogram` 参数，你会得到一张图表
+
+```
+❯ pytest -q .\test_demo.py --benchmark-histogram
+.                                                                                                                [100%]
+
+------------------------------------------------ benchmark: 1 tests -----------------------------------------------
+Name (time in us)        Min      Max    Mean  StdDev  Median     IQR    Outliers  OPS (Kops/s)  Rounds  Iterations
+-------------------------------------------------------------------------------------------------------------------
+test_bubble_sort      1.6000  53.9000  1.7333  0.3685  1.7000  0.0000  1640;37296      576.9264  178572           1
+-------------------------------------------------------------------------------------------------------------------
+
+
+Generated histogram: D:\github\test-circle\article\code\benchmark_20210401_165958.svg
+```
+
+图片如下：
+![](/article/code/benchmark_20210401_165958.svg)
 
 关于基准测试的工具还有很多，这里就不再介绍了。
 
