@@ -19,7 +19,13 @@
 
 * [前端开发：基于cypress的自动化实践](cypress/vue-cypress.md)
 
+### seldom 系列
+
+* [seldom 2.0 如何更简单的实现HTTP接口自动化测试](/seldom/seldom2.0.md)
+
 
 ### 测试 系列
 
 * [测试开发的定位](article/test_dev.md)
+* [python基准测试](article/test_dev.md)
+* [python代码性能分析](article/profile.md)
