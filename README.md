@@ -29,3 +29,8 @@
 * [测试开发的定位](article/test_dev.md)
 * [python基准测试](article/test_dev.md)
 * [python代码性能分析](article/profile.md)
+
+### 其他
+
+* [接口测试的N种玩法](article/interface_test.md)
+* [HTTP2.0](article/http2.md)
