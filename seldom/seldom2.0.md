@@ -13,6 +13,8 @@ Seldom 1.0版本2020年1月发布到现在，更新20多个小版本，目前在
 
 如此看来，seldom支持HTTP接口测试两全齐美。
 
+seldom 完全基于[requests](https://docs.python-requests.org/en/master/)实现，如果你熟悉requests API, seldom 默认兼容requests 的API，用法一致。
+
 ## 优势对比
 
 先来看看unittest + requests 是如何来做接口自动化的：
@@ -42,7 +44,7 @@ if __name__ == '__main__':
 import seldom
 
 
-class TestAPI(seldom.HttpRequest):
+class TestAPI(seldom.TestCase):
 
     def test_get_method(self):
         payload = {'key1': 'value1', 'key2': 'value2'}
@@ -51,7 +53,7 @@ class TestAPI(seldom.HttpRequest):
 
 
 if __name__ == '__main__':
-    seldom.run()
+    seldom.main()
 ```
 
 主要简化点在，接口的返回数据的处理。当然，seldom真正的优势在日志和报告。打开debug模式`seldom.run(debug=True)` 运行上面的用例。
@@ -158,7 +160,7 @@ class TestAPI(unittest.TestCase):
 import seldom
 
 
-class TestAPI(seldom.HttpRequest):
+class TestAPI(seldom.TestCase):
 
     def test_get_method(self):
         payload = {'name': 'tom', 'hobby': ['basketball', 'swim']}
@@ -194,7 +196,7 @@ seldom 集成了JSON-Schema，可以实现强大的JSON校验。
 import seldom
 
 
-class TestAPI(seldom.HttpRequest):
+class TestAPI(seldom.TestCase):
 
     def test_format_assert(self):
         """
@@ -220,7 +222,7 @@ class TestAPI(seldom.HttpRequest):
 假设接口返回数据如下，如果我想断言 `bread`。
 
 ```json
-{'args': {'foot': 'bread'}}
+{"args": {"foot": "bread"}}
 ```
 
 unittest的断言是这样的：
@@ -243,7 +245,7 @@ self.assertPath('args.foot', 'bread')
 在场景测试中，我们需要利用上一个接口的数据，调用下一个接口。
 
 ```python
-class TestRespData(seldom.HttpRequest):
+class TestRespData(seldom.TestCase):
 
     def test_data_dependency(self):
         """
@@ -253,12 +255,12 @@ class TestRespData(seldom.HttpRequest):
         self.get("/get", headers=headers)
         self.assertStatusCode(200)
 
-        username = self.resp["headers"]["X-Account-Fullname"]
+        username = self.response["headers"]["X-Account-Fullname"]
         self.post("/post", data={'username': username})
         self.assertStatusCode(200)
 ```
 
-seldom提供了`self.resp`用于记录上个接口返回的结果，直接拿来用即可。
+seldom提供了`self.response`用于记录上个接口返回的结果，直接拿来用即可。
 
 
 
@@ -283,7 +285,7 @@ class TestDDT(seldom.HttpRequest):
         payload = {key: value}
         self.post("/post", data=payload)
         self.assertStatusCode(200)
-        self.assertEqual(self.resp["form"][key], value)
+        self.assertEqual(self.response["form"][key], value)
 
 ```
 
@@ -309,7 +311,7 @@ from seldom import file_data
 DATA_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data.json")
 
 
-class TestDDT(seldom.HttpRequest):
+class TestDDT(seldom.TestCase):
 
     @file_data(DATA_PATH, key="login")
     def test_data(self, username, password):
@@ -319,7 +321,7 @@ class TestDDT(seldom.HttpRequest):
         payload = {username: password}
         self.post("http://httpbin.org/post", data=payload)
         self.assertStatusCode(200)
-        self.assertEqual(self.resp["form"][username], password)
+        self.assertEqual(self.response["form"][username], password)
 
 ```
 
