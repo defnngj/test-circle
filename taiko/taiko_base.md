@@ -220,7 +220,7 @@ const { openBrowser, goto, click, alert, closeBrowser } = require('taiko');
 
 * `{headless: false}`: 默认开启`true`，通过设置为`false`将其关闭，这样就可以看到浏览器的运行过程了。
 * `resizeWindow()`: 设置浏览器的宽高。
-* `alert()`: 在操作警告框之前，先要设置针对警告的操作，这一点有点把常识。
+* `alert()`: 在操作警告框之前，先要设置针对警告的操作，这一点有点反常识。
 
 __运行脚本__
 
