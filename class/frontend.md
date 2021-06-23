@@ -1,6 +1,6 @@
 # 前端UI自动化测试实战
 
-###基础篇：
+### 基础篇：
   * 自动测试环境安装
     * python
     * selenium
@@ -65,7 +65,7 @@
   * webeditor使用
   * uiautomator API
 
-###自动化测试框架篇
+### 自动化测试框架篇
 
 * 封装selenium/appium API
 * 封装数据驱动ddt
@@ -78,7 +78,7 @@
    * 制作命令行工具
    * 制作脚手架工具
 
-###前端UI自动化实战篇
+### 前端UI自动化实战篇
 
 * vue.js 项目介绍
 * YAPI使用
