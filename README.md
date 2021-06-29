@@ -34,3 +34,11 @@
 
 * [接口测试的N种玩法](article/interface_test.md)
 * [HTTP2.0](article/http2.md)
+
+
+### todo
+
+https://github.com/getgauge/taiko
+
+https://pypi.org/project/pytest-xdist/
+
