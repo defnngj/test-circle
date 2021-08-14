@@ -51,3 +51,12 @@ https://pypi.org/project/pytest-xdist/
 
 https://github.com/cdr/code-server
 
+https://django-ninja.rest-framework.com/
+
+https://github.com/pengtech/pnxtest
+
+https://fastapi.tiangolo.com/zh/
+
+https://github.com/Meituan-Dianping/lyrebird  移动应用代理插件平台
+
+https://github.com/golemhq/golem  A complete test automation tool
