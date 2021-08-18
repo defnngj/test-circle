@@ -60,3 +60,5 @@ https://fastapi.tiangolo.com/zh/
 https://github.com/Meituan-Dianping/lyrebird  移动应用代理插件平台
 
 https://github.com/golemhq/golem  A complete test automation tool
+
+https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests
