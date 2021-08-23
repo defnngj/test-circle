@@ -32,17 +32,19 @@
 
 ### 其他
 
-* [接口测试的N种玩法](article/interface_test.md)
-* [HTTP2.0](article/http2.md)
+* [接口测试的N种玩法](./article/interface_test.md)
+* [HTTP2.0](./article/http2.md)
 * [如何写一篇IT界的爽文](./article/test_sw.md)
-* [不写定位的自动化测试工具taiko](/taiko/taiko_base.md)
+* [不写定位的自动化测试工具taiko](./taiko/taiko_base.md)
 * [还可以这样操作数据库](./sql/sql.md)
-* [浅谈web框架之fastapi](/fastapi/fastapi.md)
+* [浅谈web框架之fastapi](./fastapi/fastapi.md)
 * [自动化测试之争：code vs codeless](./article/codeless.md)
-* [非通用移动测试工具](/article/app_test.md)
+* [非通用移动测试工具](./article/app_test.md)
 * [浅谈自动化测试框架开发](./article/test_framework.md)
-* [关于测试的讨论从未停止过](article/test_gang.md)
-
+* [关于测试的讨论从未停止过](./article/test_gang.md)
+* [一个小型项目所使用的前后端技术](./article/Contempt_chain.md)
+* [当pytest遇上poium会擦出什么火花](./seldom/pytest-seldom.md)
+* [Bot Style Tests VS Page Objects](./selenium4/bot-style-test.md)
 
 
 ### todo
@@ -62,3 +64,13 @@ https://github.com/Meituan-Dianping/lyrebird  移动应用代理插件平台
 https://github.com/golemhq/golem  A complete test automation tool
 
 https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests
+
+https://github.com/HDE/arsenic/tree/main/src/arsenic  异步webdriver框架
+
+https://github.com/pyppeteer/pyppeteer
+
+https://playwright.dev/python/docs/intro/
+
+Python Async/Await入门指南:
+https://zhuanlan.zhihu.com/p/27258289
+
