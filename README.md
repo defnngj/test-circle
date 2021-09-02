@@ -74,3 +74,13 @@ https://playwright.dev/python/docs/intro/
 Python Async/Await入门指南:
 https://zhuanlan.zhihu.com/p/27258289
 
+https://github.com/tebelorg/RPA-Python
+
+https://github.com/uber-archive/pyflame
+
+https://github.com/luizyao/pytest-chinese-doc
+
+https://www.cnblogs.com/xueweihan/p/12193702.html
+
+谷歌工程实践：
+https://jimmysong.io/eng-practices/
