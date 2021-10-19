@@ -84,3 +84,23 @@ https://www.cnblogs.com/xueweihan/p/12193702.html
 
 谷歌工程实践：
 https://jimmysong.io/eng-practices/
+
+
+好看的终端-UI：
+https://github.com/starship/starship
+
+
+webdriver-manager:
+https://github.com/SergeyPirogov/webdriver_manager
+
+自动爬取图片：
+https://github.com/YoongiKim/AutoCrawler
+
+
+pytest中文文档：
+https://github.com/luizyao/pytest-chinese-doc
+
+
+
+rich 命令行UI
+https://github.com/willmcgugan/rich
