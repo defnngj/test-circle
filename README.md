@@ -14,6 +14,7 @@
 
 * [Selenium 4 源码分析](selenium4/selenium_python.md)
 * [Selenium 4 Grid工作原理](selenium4/selenium_grid4.md)
+* [Selenium 4.0 发布](selenium4/selenium4.0.0.md.md)
 
 ### cypree 系列
 
@@ -22,13 +23,12 @@
 ### seldom 系列
 
 * [seldom 2.0 如何更简单的实现HTTP接口自动化测试](/seldom/seldom2.0.md)
-
+* [seldom 实战](/seldom/seldom_pro.md)
 
 ### 测试 系列
 
 * [测试开发的定位](article/test_dev.md)
-* [python基准测试](article/test_dev.md)
-* [python代码性能分析](article/profile.md)
+* [程序员高质量代码](./article/code.md)
 
 ### 其他
 
@@ -45,11 +45,21 @@
 * [一个小型项目所使用的前后端技术](./article/Contempt_chain.md)
 * [当pytest遇上poium会擦出什么火花](./seldom/pytest-seldom.md)
 * [Bot Style Tests VS Page Objects](./selenium4/bot-style-test.md)
+* [分析：如何多线程运行测试用例](./selenium4/threading_test.md)
+* [web性能检测工具lighthouse](./article/lighthouse.md)
+
+
+### python 
+
+* [python基准测试](article/test_dev.md)
+* [python代码性能分析](article/profile.md)
+* [这套python基础教程拿走](./article/python.md)
+* [在Python中使用sikuli](./article/sikuli4python.md)
+* [Python多线程运行测试用例](./article/threading_test.md)
+
 
 
 ### todo
-
-https://pypi.org/project/pytest-xdist/
 
 https://github.com/cdr/code-server
 
@@ -101,6 +111,17 @@ pytest中文文档：
 https://github.com/luizyao/pytest-chinese-doc
 
 
-
 rich 命令行UI
 https://github.com/willmcgugan/rich
+
+
+接口测试平台：
+https://github.com/liwanlei/FXTest
+
+
+google Lighthouse
+https://github.com/GoogleChrome/lighthouse
+
+
+python 日志工具
+https://github.com/Delgan/loguru
