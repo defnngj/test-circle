@@ -93,7 +93,7 @@
 7. 测试报告
    * [HTMLTestRunner](https://github.com/SeldomQA/HTMLTestRunner)
    * [unittest-xml-reporting](https://github.com/xmlrunner/unittest-xml-reporting)
-
+   * [xmltodict](https://github.com/martinblech/xmltodict)
 
 8. 数据驱动
    * [parameterized](https://github.com/wolever/parameterized)
