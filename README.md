@@ -73,8 +73,6 @@ https://github.com/Meituan-Dianping/lyrebird  移动应用代理插件平台
 
 https://github.com/golemhq/golem  A complete test automation tool
 
-https://github.com/SeleniumHQ/selenium/wiki/Bot-Style-Tests
-
 https://github.com/HDE/arsenic/tree/main/src/arsenic  异步webdriver框架
 
 https://github.com/pyppeteer/pyppeteer
@@ -114,6 +112,8 @@ https://github.com/luizyao/pytest-chinese-doc
 rich 命令行UI
 https://github.com/willmcgugan/rich
 
+python 日志工具
+https://github.com/Delgan/loguru
 
 接口测试平台：
 https://github.com/liwanlei/FXTest
@@ -123,5 +123,15 @@ google Lighthouse
 https://github.com/GoogleChrome/lighthouse
 
 
-python 日志工具
-https://github.com/Delgan/loguru
+美团App页面视图可测性改造实践
+https://tech.meituan.com/2021/07/28/app-xraysdk.html
+
+
+https://github.com/kubowania/Tetris
+
+
+Selenium, Playwright, Cypress and Puppeteer testing infrastructure
+https://github.com/aerokube
+
+移动自动化测试概述
+https://crifan.github.io/mobile_automation_overview/website/
