@@ -8,4 +8,4 @@ class MyTest(xtest.TestCase):
 
 
 if __name__ == '__main__':
-    xtest.run()
+    xtest.run(verbosity=2)

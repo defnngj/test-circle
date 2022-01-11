@@ -9,6 +9,8 @@ class TestCase(unittest.TestCase):
 
     @staticmethod
     def say_hello(name: str, times: int = 1) -> None:
+        """
+        """
         if times < 1:
             return
         for _ in range(times):
@@ -24,9 +26,10 @@ class TestCase(unittest.TestCase):
         return choice_name
 
 
-def run():
+def run(verbosity=1):
     """
     运行用例方法
     """
-    unittest.main()
+    unittest.main(verbosity=verbosity)
+
 

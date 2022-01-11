@@ -8,8 +8,8 @@
 
 * 单元测试框架
   * [单元测试框架介](./03_unittest_framework.md)
-  * 基于unittest扩展
-  * 基于pytest实现插件
+  * [基于unittest扩展](./05_unittest_extend.md)
+  * [基于pytest实现插件](./04_pytest_plug_in.md)
   * 设计`setup.py`安装文件
 
 * Web UI测试
