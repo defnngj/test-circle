@@ -135,7 +135,21 @@ PASSED
 ### 实现pytest-hello插件
 我么暂且称这个插件为`pytest-hello`。
 
-创建`pytest_hello.py`文件，实现代码如下：
+https://github.com/defnngj/pytest-hello
+
+
+目录结构如下：
+
+```shell
+pytest-hello/
+├── pytest_hello/
+│   ├── __init__.py
+│   ├── pytest_hello.py
+└── setup.py
+```
+
+
+核心代码在`pytest_hello.py`文件中，实现功能如下：
 
 ```python
 import pytest
@@ -217,9 +231,10 @@ __主要代码说明：__
 
 对于`pytest-hello`项目，需要创建`setup.py`文件进行安装，在后面的章节会介绍该文件如何设置。现在，参考github上的介绍，安装`pytest-hello`插件。
 
-github:https://github.com/defnngj/pytest-hello
 
 ### pytest-hello使用
+
+> pytest-hello 安装方式参考项目Github地址
 
 当你安装好`pytest-hello`后，使用通过`pytest --help`查看帮助信息。
 

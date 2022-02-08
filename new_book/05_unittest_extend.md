@@ -1,20 +1,28 @@
 ## 开发unittest扩展
 
-`unittest`属于是有类集成的测试框架，扩展他的API相对要简单很多。需要在`TestCase` 类的基础上扩展即可，例如`django`框架所提供的测试类也继承自`unittest`的`TestCase`类。
+`unittest`属于是有类继承的测试框架，扩展他的API相对要简单很多。需要在`TestCase` 类的基础上扩展即可，例如`django`框架所提供的测试类也继承自`unittest`的`TestCase`类。
 
 ![](./img/unittest_extend.png)
 
-如上图所示，值需要在自己的的扩展中创建`TestCase`类继承unittest框架的`TestCase`类，然后，在具体项目中使用自己的扩展`TestCase`类即可。
+如上图所示，只需要在自己的的扩展中创建`TestCase`类继承unittest框架的`TestCase`类，然后，在具体项目中使用自己的扩展`TestCase`类即可。
 
 ### 实现扩展
 
+我们暂且为扩展命名为：`unittest-extend`。
+
+https://github.com/defnngj/unittest-extend
+
+目录结构如下：
+
 ```shell
-unittest_sample/
-├── xtest.py
-└── test_sample.py
+unittest-extend/
+├── xtest/
+│   ├── __init__.py
+│   ├── case.py
+└── setup.py
 ```
 
-首先，创建一个`xtext`文件， 实现代码如下。
+主要功能是在`case.py`文件实现扩展方法。
 
 ```py
 import unittest
@@ -28,6 +36,12 @@ class TestCase(unittest.TestCase):
 
     @staticmethod
     def say_hello(name: str, times: int = 1) -> None:
+        """
+        打招呼
+        :param name: 名字
+        :param times: 次数
+        :return:
+        """
         if times < 1:
             return
         for _ in range(times):
@@ -37,17 +51,18 @@ class TestCase(unittest.TestCase):
     def get_name(self) -> str:
         """
         随机返回一个名字
+        :return:
         """
         name_list = ["Andy", "Bill", "Jack", "Robert", "Ada", "Jane", "Eva", "Anne"]
         choice_name = random.choice(name_list)
         return choice_name
 
 
-def run():
+def run(verbosity=1):
     """
     运行用例方法
     """
-    unittest.main()
+    unittest.main(verbosity=verbosity)
 
 ```
 
@@ -61,7 +76,12 @@ __主要代码说明:__
 
 4. 将`unittest.main()` 入口方法，重写到一个`run()`方法中，这样做是为了完全消除编写测试用例中`unittest` 的影子。
 
-然后，创建测试文件`test_sample.py`，实现代码如下：
+
+### unittest-extend使用
+
+> unittest-extend 安装方式参考项目Github地址
+
+安装好`unittest-extend`之后创建测试文件`test_sample.py`，实现代码如下：
 
 ```py
 import xtest
@@ -81,7 +101,9 @@ __主要代码说明:__
 
 1. 创建测试类`MyTest` 继承`xtest.TestCase`类。
 
-2. 创建测试用例`test_case()`, 在用例中使用父类中封装的`say_hello()`方法，然后调用父类中的`get_name`语句获取一个英文名，最后，对着个名字说三次“hello”。
+2. 创建测试用例`test_case()`, 在用例中使用父类中封装的`say_hello()`方法，然后调用父类中的`get_name`语句获取一个英文名，并对着个名字说三次“hello”。
+
+3. 最后，调用`xtest.run()` 运行测试用例。
 
 
 执行结果：
