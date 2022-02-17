@@ -2,6 +2,8 @@
 
 ## 基础篇：
 
+> python基础 + unittest/pytest单元测试框架
+
   * 自动测试环境安装
     * python
     * selenium
@@ -29,11 +31,11 @@
     * 生成报告
     * conftest.py 配置文件
     * 扩展插件: pytest-html、pytest-rerunfailures、pytest-parallel
-  * 自动化测试模型
-    * 基本概念：库、框架、工具
-    * 测试模型：线生测试、模块化、数据驱动、关键字驱动
+    * 使用allure测试报告
+
 
 ## UI测试工具篇
+> web UI + App UI 主流测试工具
 
 * selenium API
   * 元素定位
@@ -51,6 +53,10 @@
   * Grid工作原理
   * Selenium server环境安装
   * 启动节点& 远程节点
+* playwright
+  * 元素定位
+  * 录制功能
+  * 常用API  
 * appium
   * appium工作原理
   * appium环境搭建
@@ -67,27 +73,33 @@
   * uiautomator API
 
 ## 自动化测试框架篇
+> 开发测试框架
 
-* 封装selenium/appium API
+* 自动化测试模型
+  * 基本概念：库、框架、工具
+  * 测试模型：线生测试、模块化、数据驱动、关键字驱动
+* selenium/appium API二次开发
 * 封装数据驱动ddt
-* 封装Page object设计模式
-* 封装自动发邮件
+* 封装logging
+* 自定义异常类
+* 生成随机数据
 * 测试报告
 	* 定制化报告样式
 	* 实现自动截图
+	* 集成发邮件
 *  命令行工具
    * 制作命令行工具
    * 制作脚手架工具
+* 封装Page object设计模式
 
 ## 前端UI自动化实战篇
 
 * vue.js 项目介绍
 * YAPI使用
-* cypress API
-
-
-*  持续集成
-    * ...
+* cypress 项目实战
+* selenium 项目实战
+* 持续集成
+* 前端监控
 
 * 其他服务
 	*  面试题技巧与经验
