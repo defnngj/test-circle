@@ -2,7 +2,7 @@
 
 ## 背景
 
-目前移动端App上线后 crash 率比较高， 。我们需要一款Monkey工具测试App的稳定性，更早的发现crash问题并修复。
+目前移动端App上线后 crash 率比较高，我们需要一款Monkey工具测试App的稳定性，更早地发现crash问题并修复。
 
 前面一篇文章已经介绍过了fastbot-iOS的使用，文本将介绍 fastbot-android。
 
@@ -61,12 +61,13 @@ UMXDU20813000084        device
 2. 运行fastbot
 
 ```shell
-> adb -s UMXDU20813000084 shell CLASSPATH=/sdcard/monkeyq.jar:/sdcard/framework.jar:/sdcard/fastbot-thirdpart.jar exec app_process /system/bin com.android.commands.monkey.Monkey -p com.klook --agent reuseq --running-minutes 60 --throttle 500 -v -v
+> adb -s UMXDU20813000084 shell CLASSPATH=/sdcard/monkeyq.jar:/sdcard/framework.jar:/sdcard/fastbot-thirdpart.jar exec app_process /system/bin com.android.commands.monkey.Monkey -p com.xxx --agent reuseq --running-minutes 60 --throttle 500 -v -v
 ```
 
-参数说明
+__参数说明__
+
 - -s  :  指定设备ID（可以通过adb 命令查看当前电脑接入的设备信息）。
-- -p :  指定运行的App 包名（com.klook）。
+- -p :  指定运行的App 包名（com.xxx）.
 - --agent reuseq  : 遍历模式，无需更改。
 - --runing-minutes :  遍历时长。
 - --throttle :  遍历事件频率，建议为 500ms - 800ms
@@ -255,13 +256,14 @@ ACTIVITY com.xxx/.account_implementation.public_login.PublicLoginPageActivity 45
 
 其中xpath元素定位通过`appium inspector` 、`web-editor` 等工具查看。
 
-1. 编写事件序列配置（case）：
+* 编写事件序列配置（case）：
   - prob：发生概率，"prob"：1,代表发生概率为100%
   - activity：所属场景，详见：三.获取当前页面所属的Activity
   - times：重复次数，默认为1即可
   - actions：具体步骤的执行类型
   - throttle：action间隔事件（ms）
-2. 支持的元素操作：
+
+* 支持的元素操作：
 action 支持以下类型：必须大写
   - CLICK：点击，想要输入内容在action下补充text，如果有text 则执行文本输入
   - LONG_CLICK：长按
