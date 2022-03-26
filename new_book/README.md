@@ -10,11 +10,12 @@
   * [单元测试框架介](./03_unittest_framework.md)
   * [基于unittest扩展](./05_unittest_extend.md)
   * [基于pytest实现插件](./04_pytest_plug_in.md)
-  * 设计`setup.py`安装文件
+  * [构建python包](./06_setup_.md)
 
 * Web UI测试
   * 主流测试库介绍
   * Selenium API 封装
+  * [方法链（Method Chaining）](./07_method_chaining.md)
   * 自动管理浏览器驱动
   * 元素智能等待
   * 元素高亮显示
