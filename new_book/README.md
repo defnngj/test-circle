@@ -14,9 +14,9 @@
 
 * Web UI测试
   * 主流测试库介绍
-  * Selenium API 封装
-  * [方法链（Method Chaining）](./07_method_chaining.md)
-  * 自动管理浏览器驱动
+  * [Selenium API 封装](./07_selenium_api_dev.md)
+  * [方法链（Method Chaining）](./08_method_chaining.md)
+  * [自动管理浏览器驱动](./09_browser_driver.md)
   * 元素智能等待
   * 元素高亮显示
   * 设计断言
