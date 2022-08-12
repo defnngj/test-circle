@@ -231,14 +231,14 @@ ACTIVITY com.xxx/.account_implementation.public_login.PublicLoginPageActivity 45
     "times": 1,
     "actions": [
         {
-            "xpath":"//*[@resource-id='com.klook:id/phone']",
+            "xpath":"//*[@resource-id='com.baidu:id/phone']",
             "action": "CLICK",
             "text": "18911112222",
             "clearText": true,
             "throttle": 2000
         },
         {
-            "xpath":"//*[@resource-id='com.klook:id/pwd']",
+            "xpath":"//*[@resource-id='com.baidu:id/pwd']",
             "action": "CLICK",
             "text": "xxxxx",
             "clearText": false,
