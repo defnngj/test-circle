@@ -245,7 +245,7 @@ ACTIVITY com.xxx/.account_implementation.public_login.PublicLoginPageActivity 45
             "throttle": 2000
         },
         {
-            "xpath":"//*[@resource-id='com.klook:id/nextStepRl']",
+            "xpath":"//*[@resource-id='com.baidu:id/nextStepRl']",
             "action": "CLICK",
             "throttle": 2000
         }
