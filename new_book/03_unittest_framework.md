@@ -240,5 +240,3 @@ FAILED test_pytest.py::test_answer - assert (3 + 1) == 5
 github: https://github.com/pytest-dev/pytest
 
 
-> 有同学说阅读不方便，这里发表的文章一直存在github：https://github.com/defnngj/test-circle ， 这里记录了我最近一年发表在公众号的文章，以及我感兴趣的一些项目的连接。
-

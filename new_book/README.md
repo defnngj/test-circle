@@ -5,12 +5,49 @@
 * 自动化测试框架设计基础
   * [相关概念](./01_test_framework.md)
   * [框架设计基础](./02_test_framework.md)
+  * [构建python包](./06_setup_.md)
 
 * 单元测试框架
   * [单元测试框架介](./03_unittest_framework.md)
   * [基于unittest扩展](./05_unittest_extend.md)
   * [基于pytest实现插件](./04_pytest_plug_in.md)
-  * [构建python包](./06_setup_.md)
+
+* 测试报告设计
+  * [基于unittest重写测试报告](./11_test_report.md)
+  * [如何获取HTML模板](./12_html_template.md)
+  * [Jinja模板引擎](./13_jinja2_template.md)
+  * [unittest生成HTML测试报告](./14_test_report_html.md)
+
+* 自动发送服务
+  * 发送邮件
+  * 发送钉钉
+  * 发送企业微信
+  * 发送飞书
+
+* 数据驱动设计
+  * 数据驱动库
+  * 支持多种数据文件
+
+* 数据库操作封装
+  * 基础封装
+  * mysql/SQLite/oongoDB
+  * [还可以这样操作数据库](./10_db_operation.md)
+
+* 随机数据自动生成
+  * 生成随机数据库
+  * 设计常用测试数据
+
+* 实现命令行工具
+  * 命令行工具介绍
+  * 生成命令行命令
+  * 设计脚手架
+
+* 其他设计
+  * 用例依赖
+  * 分类标签
+  * 打印日志
+  * 自定义异常类型
+  * 缓存cache
 
 * Web UI测试
   * 主流测试库介绍
@@ -19,7 +56,7 @@
   * [自动管理浏览器驱动](./09_browser_driver.md)
   * 元素智能等待
   * 元素高亮显示
-  * 设计断言
+  * 设计UI元素断言
 
 * app UI测试
   * 主流移动测试库
@@ -29,7 +66,7 @@
 * HTTP测试
   * 主流HTTP测试库
   * requests API 封装
-  * 设计断言
+  * 设计接口断言
   * 数据库操作
 
 * Page object设计模式
@@ -38,29 +75,11 @@
   * webium库设计原理
   * poium库设计原理
 
-* 测试报告
-  * HTML测试报告
-  * XML测试报告
-  * JSON测试报告
-
-* 数据驱动
-  * 数据驱动库
-  * 支持多种数据文件
-
-* 异常与日志
-  * 自定义异常类
-  * 引入日志库
-  * 字符画
-
-* 实现命令行工具
-  * 命令行工具介绍
-  * 生成命令行命令
-  * 设计脚手架
-
-* 其他扩展开发
-  * 集成封装自动发邮件
-  * 生成测试数据数据
-  * 实现用例依赖
+* 平台化支持
+  * 提取自动化用例信息
+  * 执行自动化用例
+  * 接入平台
+  * 平台化执行&报告
 
 * 发布框架到pypi仓库
 
@@ -114,4 +133,4 @@
 * 其他扩展开发
   * [yagmail](https://github.com/kootenpv/yagmail)
   * [faker](https://github.com/joke2k/faker)
-
+  * [testdata](https://github.com/Jaymon/testdata)
