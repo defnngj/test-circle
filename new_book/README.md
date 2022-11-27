@@ -31,9 +31,8 @@
   * 发送飞书
 
 * 数据库操作封装
-  * 基础封装
-  * mysql/SQLite/oongoDB
-  * [还可以这样操作数据库](./10_db_operation.md)
+  * [数据库操作技术](./18_db_operation.md)
+  * [数据库操作封装](./19_db_dev.md)
 
 * 随机数据自动生成
   * 生成随机数据库
