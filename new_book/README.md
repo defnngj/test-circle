@@ -18,25 +18,26 @@
   * [Jinja模板引擎](./13_jinja2_template.md)
   * [unittest生成HTML测试报告](./14_test_report_html.md)
 
-* 数据驱动设计
-  * [unittest数据驱动扩展](./15_data_driver.md)
-  * [实现 @data 装饰器](./16_data_driver.md)
-  * [基于 @data 支持dict格式](./16_data_driver.md)
-  * [实现 @file_data 装饰器](./17_data_driver.md)
-
 * 自动发送服务
   * 发送邮件
   * 发送钉钉
   * 发送企业微信
   * 发送飞书
 
+* 数据驱动设计
+  * [unittest数据驱动扩展](./15_data_driver.md)
+  * [实现 @data 装饰器](./16_data_driver.md)
+  * [基于 @data 支持dict格式](./16_data_driver.md)
+  * [实现 @file_data 装饰器](./17_data_driver.md)
+
+
 * 数据库操作封装
   * [数据库操作技术](./18_db_operation.md)
   * [数据库操作封装](./19_db_dev.md)
 
 * 随机数据自动生成
-  * 生成随机数据库
-  * 设计常用测试数据
+  * [随机数测试库介绍](./20_testdata_lib.md)
+  * [设计常用测试数据](./21_testdata_dev.md)
 
 * 实现命令行工具
   * 命令行工具介绍
@@ -134,5 +135,15 @@
 
 * 其他扩展开发
   * [yagmail](https://github.com/kootenpv/yagmail)
-  * [faker](https://github.com/joke2k/faker)
+
+* 数据库
+  * [pymysql](https://github.com/PyMySQL/PyMySQL)
+  * [pymssql](https://github.com/pymssql/pymssql)
+  * [sqlalchemy](https://github.com/sqlalchemy/sqlalchemy)
+  * [dbpy](https://github.com/whiteclover/dbpy)
+  * [tinydb](https://github.com/msiemens/tinydb)
+
+* 随机数据
   * [testdata](https://github.com/Jaymon/testdata)
+  * [faker](https://github.com/joke2k/faker)
+  * [hypothesis](https://github.com/HypothesisWorks/hypothesis)
