@@ -47,9 +47,9 @@
 * 其他设计
   * [用例依赖](./22_case_depend.md)
   * [用例分类标签](./23_case_labels.md)
-  * 打印日志
-  * 自定义异常类型
-  * 缓存cache
+  * [打印日志](./25_logger.md)
+  * [自定义异常](./26_logger.md)
+  * [缓存cache](./24_cache.md)
 
 * Web UI测试
   * 主流测试库介绍
@@ -127,6 +127,7 @@
 * 异常与日志
   * [colorama](https://github.com/tartley/colorama)
   * [loguru](https://github.com/Delgan/loguru)
+  * [logzero](https://github.com/metachris/logzero)
 
 * 实现命令行工具
   * [click](https://github.com/pallets/click)
