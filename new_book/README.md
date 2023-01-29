@@ -40,9 +40,10 @@
   * [设计常用测试数据](./21_testdata_dev.md)
 
 * 实现命令行工具
-  * 命令行工具介绍
-  * 生成命令行命令
-  * 设计脚手架
+  * [命令行工具介绍](./27_command.md)
+  * [实现脚手架](./28_command_used.md)
+  * [实现性能工具](./28_command_used.md)
+  * [生成命令行工具](./28_command_used.md)
 
 * 其他设计
   * [用例依赖](./22_case_depend.md)
