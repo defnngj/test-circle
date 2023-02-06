@@ -53,13 +53,11 @@
   * [缓存cache](./24_cache.md)
 
 * Web UI测试
-  * 主流测试库介绍
+  * [主流测试库介绍](./29_web_testing_framework.md)
   * [Selenium API 封装](./07_selenium_api_dev.md)
   * [方法链（Method Chaining）](./08_method_chaining.md)
   * [自动管理浏览器驱动](./09_browser_driver.md)
-  * 元素智能等待
-  * 元素高亮显示
-  * 设计UI元素断言
+  * [设计UI元素断言](./30_web_testing_assert.md)
 
 * app UI测试
   * 主流移动测试库
