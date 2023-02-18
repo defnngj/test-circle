@@ -57,7 +57,7 @@
   * [Selenium API 封装](./07_selenium_api_dev.md)
   * [方法链（Method Chaining）](./08_method_chaining.md)
   * [自动管理浏览器驱动](./09_browser_driver.md)
-  * [设计UI元素断言](./30_web_testing_assert.md)
+  * [设计Web测试断言](./30_web_testing_assert.md)
 
 * app UI测试
   * 主流移动测试库
@@ -65,10 +65,10 @@
   * uiautomator2 API 集成
 
 * HTTP测试
-  * 主流HTTP测试库
-  * requests API 封装
-  * 设计接口断言
-  * 数据库操作
+  * [主流HTTP测试库](./31_http_testing.md)
+  * [封装 HTTP 测试库 API](./32_http_api.md)
+  * [设计接口测试断言](./33_http_assert.md)
+  * [装接口检查装饰器](./34_decorator.md)
 
 * Page object设计模式
   * page object设计模式
