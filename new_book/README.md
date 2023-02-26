@@ -60,9 +60,9 @@
   * [设计Web测试断言](./30_web_testing_assert.md)
 
 * app UI测试
-  * 主流移动测试库
-  * appium API 封装
-  * uiautomator2 API 集成
+  * [App移动测试工具](./35_app_testing.md)
+  * [appium 基本使用](./36_app_testing.md)
+  * [appium API 封装](./37_appium_api.md)
 
 * HTTP测试
   * [主流HTTP测试库](./31_http_testing.md)
