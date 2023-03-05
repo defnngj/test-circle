@@ -71,10 +71,9 @@
   * [装接口检查装饰器](./34_decorator.md)
 
 * Page object设计模式
-  * page object设计模式
-  * 自定义Page object设计模式
-  * webium库设计原理
-  * poium库设计原理
+  * [设计模式和开发策略](./38_po_base.md)
+  * [page object测试库](./39_po_lib.md)
+  * [poium库设计原理](./40_poium_core.md)
 
 * 平台化支持
   * 提取自动化用例信息
