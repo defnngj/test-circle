@@ -76,10 +76,9 @@
   * [poium库设计原理](./40_poium_core.md)
 
 * 平台化支持
-  * 提取自动化用例信息
-  * 执行自动化用例
-  * 接入平台
-  * 平台化执行&报告
+  * [测试平台介绍](./41_test_platform.md)
+  * [unittest平台化支持](./42_code_platform.md)
+  * [seldom-platform](./43_seldom_platform.md)
 
 * 发布框架到pypi仓库
 
@@ -110,6 +109,7 @@
 
 * Page object设计模式
   * [webium](https://github.com/wgnet/webium)
+  * [poium](https://github.com/SeldomQA/poium)
   * [poium](https://github.com/SeldomQA/poium)
 
 * 测试报告
