@@ -281,11 +281,11 @@ sonic Agent主要是用来管理移动设备的。你可以选择部署到任意
 进入docker镜像之后，找到logs 目录查看日志。 
 
 ```shell
-root@klooktest: cd logs/
-root@klooktest:~/logs# ls
+root@test: cd logs/
+root@test:~/logs# ls
 sonic-agent.log
 
-root@klooktest:~/logs# cat sonic-agent.log
+root@test:~/logs# cat sonic-agent.log
 ```
 
 如果agent部署失败或无法识别移动设备都可以从日志中查看。
