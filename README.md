@@ -140,3 +140,5 @@ https://crifan.github.io/mobile_automation_overview/website/
 unittest 测试运行器
 https://github.com/CleanCut/green
 
+selenium requests
+https://github.com/wkeeling/selenium-wire

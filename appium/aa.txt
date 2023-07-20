@@ -226,7 +226,6 @@ package:com.huawei.behaviorauth
 package:com.huawei.webview
 package:com.huawei.devicemanager
 package:com.android.adbkeyboard
-package:com.klook
 package:com.huawei.ohos.suggestion
 package:com.huawei.ucdlockscreen
 package:com.pupumall.customer
