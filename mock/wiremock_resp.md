@@ -192,7 +192,7 @@ curl --request POST \
 
 * 响应
 
-```json
+```xml
 <?xml version="1.0"?>
    <soap:Envelopexmlns:soap="http://www.w3.org/2001/12/soap-envelope"soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
       <soap:Body xmlns:m="http://www.example.org/stock">
