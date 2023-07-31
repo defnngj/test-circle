@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<output>
+    <xpathText>{{xPath request.body '/outer/inner/text()'}}</xpathText>
+    <xpath>{{xPath request.body '/outer/inner'}}</xpath>
+</output>

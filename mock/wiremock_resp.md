@@ -7,29 +7,46 @@
 
 从xml请求体重提取数据
 
+* xml文件(output.xml)
+
+```xml
+<?xml version="1.0"?>
+<output>
+    <xpathText>{{xPath request.body '/outer/inner/text()'}}</xpathText>
+    <xpath>{{xPath request.body '/outer/inner'}}</xpath>
+</output>
+```
+
+* 拷贝到docker 容器中
+
+```bash
+docker cp /home/xxx/wiremock/files/output.xml 8ad4a2b31fc1:/home/wiremock/__files/
+```
+
+`/home/xxx/wiremock/files/output.xml` 宿主机地址。
+
+`8ad4a2b31fc1` 容器ID。
+
+`/home/wiremock/__files/` 容器里面路径。
+
 * 创建接口
 
 ```bash
-curl --location 'http://127.0.0.1:8090/__admin/mappings' \
---header 'Content-Type: application/json' \
---data '{
+curl --request POST \
+  --url http://10.2.180.77:8080/__admin/mappings \
+  --header 'content-type: application/json' \
+  --data '{
     "request": {
         "method": "POST",
-        "url": "/v2/mock/resp_templating"
+        "url": "/v1/mock/resp_xml_templating"
     },
     "response": {
         "status": 200,
-        "jsonBody": {
-            "status": true,
-            "message": "success",
-            "result": {
-                "xpathText": "{{xPath request.body '\''/outer/inner/text()'\''}}",
-                "xpath": "{{xPath request.body '\''/outer/inner'\''}}"
-            }
-        },
+        "bodyFileName": "output.xml",
         "headers": {
-            "Content-Type": "application/json"
-        }
+            "Content-Type": "application/xml"
+        },
+        "transformers": ["response-template"]
     }
 }'
 ```
@@ -44,15 +61,16 @@ curl --location 'http://127.0.0.1:8090/__admin/mappings' \
 
 * 响应
 
-```json
-{
-    "status": true,
-    "message": "success",
-    "result": {
-        "xpathText": "Stuff",
-        "xpath": "&lt;inner&gt;Stuff&lt;/inner&gt;"
-    }
-}
+```xml
+<?xml version="1.0"?>
+<output>
+    <xpathText>
+        Stuff
+    </xpathText>
+    <xpath>
+        &lt;inner&gt;Stuff&lt;/inner&gt;
+    </xpath>
+</output>
 ```
 
 ### xPath高级用法
@@ -66,28 +84,33 @@ text-元素的文本内容。
 attributes—元素属性的映射(name: value)
 
 
+* xml文件(output2.xml)
+
+```xml
+<?xml version="1.0"?>
+<output>
+    <xpath>{{#each (xPath request.body '/things/item') as |node|}}name: {{node.name}}, text: {{node.text}}, ID attribute: {{node.attributes.id}}{{/each}}</xpath>
+</output>
+```
+
 * 创建接口
 
 ```bash
-curl --location 'http://127.0.0.1:8090/__admin/mappings' \
---header 'Content-Type: application/json' \
---data '{
+curl --request POST \
+  --url http://10.2.180.77:8080/__admin/mappings \
+  --header 'content-type: application/json' \
+  --data '{
     "request": {
         "method": "POST",
-        "url": "/v4/mock/resp_templating"
+        "url": "/v2/mock/resp_xml_templating"
     },
     "response": {
         "status": 200,
-        "jsonBody": {
-            "status": true,
-            "message": "success",
-            "result": {
-                "soapPath": "{{#each (xPath request.body '\''/things/item'\'') as |node|}}name:{{node.name}}, text:{{node.text}}, ID attribute: {{node.attributes.id}}{{/each}}"
-            }
-        },
+        "bodyFileName": "output2.xml",
         "headers": {
-            "Content-Type": "application/json"
-        }
+            "Content-Type": "application/xml"
+        },
+        "transformers": ["response-template"]
     }
 }'
 ```
@@ -102,14 +125,13 @@ curl --location 'http://127.0.0.1:8090/__admin/mappings' \
 
 * 响应
 
-```json
-{
-    "status": true,
-    "message": "success",
-    "result": {
-        "soapPath": "name:item, text:hello, ID attribute: 111"
-    }
-}
+```xml
+<?xml version="1.0"?>
+   <output>
+      <xpath>
+         name: item, text: hello, ID attribute: 111
+      </xpath>
+</output>
 ```
 
 
@@ -117,28 +139,41 @@ curl --location 'http://127.0.0.1:8090/__admin/mappings' \
 
 从soap请求体重提取数据
 
+* xml文件（output_soap.xml）
+
+```xml
+<?xml version="1.0"?>
+<soap:Envelope
+xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
+soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+
+<soap:Body xmlns:m="http://www.example.org/stock">
+  <m:GetStockPriceResponse>
+    <m:Result>{{soapXPath request.body '/a/test/text()'}}</m:Result>
+  </m:GetStockPriceResponse>
+</soap:Body>
+
+</soap:Envelope>
+```
+
 * 创建接口
 
 ```bash
-curl --location 'http://127.0.0.1:8090/__admin/mappings' \
---header 'Content-Type: application/json' \
---data '{
+curl --request POST \
+  --url http://10.2.180.77:8080/__admin/mappings \
+  --header 'content-type: application/json' \
+  --data '{
     "request": {
         "method": "POST",
-        "url": "/v3/mock/resp_templating"
+        "url": "/v3/mock/resp_xml_templating"
     },
     "response": {
         "status": 200,
-        "jsonBody": {
-            "status": true,
-            "message": "success",
-            "result": {
-                "soapPath": "{{soapXPath request.body '\''/a/test/text()'\''}}"
-            }
-        },
+        "bodyFileName": "output_soap.xml",
         "headers": {
-            "Content-Type": "application/json"
-        }
+            "Content-Type": "application/xml"
+        },
+        "transformers": ["response-template"]
     }
 }'
 ```
@@ -158,17 +193,17 @@ curl --location 'http://127.0.0.1:8090/__admin/mappings' \
 * 响应
 
 ```json
-{
-    "status": true,
-    "message": "success",
-    "result": {
-        "soapPath": "success"
-    }
-}
+<?xml version="1.0"?>
+   <soap:Envelopexmlns:soap="http://www.w3.org/2001/12/soap-envelope"soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+      <soap:Body xmlns:m="http://www.example.org/stock">
+         <m:GetStockPriceResponse>
+            <m:Result>
+               success
+            </m:Result>
+</m:GetStockPriceResponse>
+</soap:Body>
+</soap:Envelope>
 ```
-
-
-
 
 ### jsonPath 用法
 
@@ -205,7 +240,7 @@ curl --location 'http://127.0.0.1:8090/__admin/mappings' \
 
 ```json
 {
-    "name": "xxx"
+    "name": "jack"
 }
 ```
 
