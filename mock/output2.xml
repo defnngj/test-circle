@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<output>
+    <xpath>{{#each (xPath request.body '/things/item') as |node|}}name: {{node.name}}, text: {{node.text}}, ID attribute: {{node.attributes.id}}{{/each}}</xpath>
+</output>
