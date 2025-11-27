@@ -23,7 +23,7 @@ CodeGeeX是一个多编程语言代码生成预训练模型。
 
 在VS Code插件市场搜索CodeGeeX，安装即可。
 
-![](./codeGeex_1.png)
+![](images/codeGeex_1.png)
 
 安装之后提示需要登陆，点击登录按钮跳转到网站进行登录即可。
 
@@ -35,7 +35,7 @@ __Ask CodeGeeX 功能：__
 
 我们可以体验一下 Ask CodeGeeX 功能，可以提问一些编程语言相关的问题，CodeGeeX会自动生成代码。
 
-![](./codeGeex_2.png)
+![](images/codeGeex_2.png)
 
 从问题的回答结果来看，质量很高，可以有效减少 百度、谷歌的使用。
 
@@ -50,7 +50,7 @@ https://github.com/SeldomQA/seldom/blob/master/seldom/utils/diff.py
 
 这个代码主要是用了python实现的json 递归对比，并返回差异部分。代码还是有点复杂的，如果让我用go语言实现一边，估计得要半天时间。
 
-![](./codeGeex_3.png)
+![](images/codeGeex_3.png)
 
 从结果来看，翻译的不错，基本没有语法错误，而且代码风格也差不多。
 
@@ -60,7 +60,7 @@ __Generate Code 功能：__
 
 我创建一个 sample.py 文件，写下一行注释： "实现一个冒泡排序"
 
-![](./codeGeex_4.png)
+![](images/codeGeex_4.png)
 
 以上截图中的代码全部由CodeGeeX自动联想，是我全程按tab键生成的。
 
