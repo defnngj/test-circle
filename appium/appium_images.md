@@ -32,11 +32,11 @@ appium server --address '127.0.0.1' -p 4723  --use-plugins=images
 
 以App 为例：
 
-![](app.png)
+![](images/app.png)
 
 首先，将要定位的页面按钮，截图并保存为图片文件`phone.png`。
 
-![](phone.png)
+![](images/phone.png)
 
 然后，编写appium自动测试脚本。
 
@@ -132,7 +132,7 @@ el.click()
 由于通过图像查找元素依赖于图像分析软件与appium的截图功能，以及你提供的图片，appium提供了一些设置，帮助你调节此功能，在某些情况下可能加快匹配速度或使其更准确。
 
 
-![](setting.png)
+![](images/setting.png)
 
 具体使用参考前面的方法：
 

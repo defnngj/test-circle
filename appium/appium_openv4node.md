@@ -180,11 +180,11 @@ https://github.com/appium/python-client
 
 界面：
 
-![](./meizu.png)
+![](images/meizu.png)
 
 按钮截图：
 
-![](./write.png)
+![](images/write.png)
 
 保存路径为：`D:\appium\image\write.png`
 
