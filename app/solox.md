@@ -53,13 +53,13 @@ sudo python -m solox
 
 * 实时收集页面
 
-![](img/solox-collect.png)
+![](images/solox-collect.png)
 
 左侧选择收集的设备和App，以及勾选要显示的指标，然后选择开始收集。 
 
 * 测试报告界面
 
-![](img/solox-report.png)
+![](images/solox-report.png)
 
 停止收集，点击 report页面，可以分析收集的指标。
 

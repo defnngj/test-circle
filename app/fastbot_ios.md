@@ -17,7 +17,7 @@ __准备工具__
 
 1. 通过macOS应用商店下载XCode。
 
-![](./img/xcode.png)
+![](images/xcode.png)
 
 2. 安装cocoapods 
 
@@ -46,7 +46,7 @@ https://github.com/bytedance/Fastbot_iOS
 
 1. 点击顶部`FastbotRunner` 弹出菜单，选择`Edit Scheme...` 选项。
 
-![](./img/scheme.png)
+![](images/scheme.png)
 
 在`Scheme`中设置参数，参考表格：
 
@@ -62,7 +62,7 @@ https://github.com/bytedance/Fastbot_iOS
 
 点击`testFastbot` 按钮，开始运行Monkey测试。你可以在手机端看到被测试App以及启动，并开始自动执行操作。
 
-![](./img/xocde_test.png)
+![](images/xocde_test.png)
 
 
 ## 运行测试（tidevice）
